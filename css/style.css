@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -13,7 +14,7 @@
     --main-color-elight: #EEDFCA;
     --secondary: #404043;
     --secondary-semi: #707076;
-    --secondary-middle: #A3A3AC;
+    --secondary-middle: #BEBEC8;
     --secondary-light: #CCCCD3;
     --secondary-elight: #E0E0E9;
     --dark: #202021;
@@ -27,25 +28,33 @@
     --grey-middle: #e5e5e5;
     --grey-light: #f5f5f5;
     --grey-elight: #fafafa;
+    --black-translucent: rgba(18, 17, 17, 0.82);
+    --shadow-menu: rgba(0, 0, 0, 0.25);
     --white: #ffffff;
     --gap-directions: 20px;
     --shadow: rgba(115, 115, 115, 0.25);
     --gap-maps: 20px;
-    --gap-icon: 11px;
+    --gap-icon: 10px;
+    --gap-10: 10px;
 }
 
-p, ul, li, h1, h2, h3, h4, h5, h6 {
+a, p, ul, li, h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 a, .link-logo {
     text-decoration: none;
-    color: var(--white);
+    color: var(--secondary-light);
 }
 
 a:hover {
-    color: var(--);
+    color: var(--secondary-semi);
     transition: color 300ms linear;
+}
+
+
+.link-logo:hover {
+    color: var(--secondary-light);
 }
 
 .container {
@@ -55,17 +64,16 @@ a:hover {
 }
 
 .btn {
-    background-color: var(--);
-    border: none;
-    border-radius: 10px;
-    color: var(--);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid var(--secondary-middle);
+    color: var(--white);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
     text-align: center;
     text-transform: uppercase;
-    padding: 18px 60px 14px 60px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 20px 10px 20px;
     width: fit-content; 
 }
 
@@ -78,7 +86,7 @@ a:hover {
 h1 {
     font-style: normal;
     font-weight: 400;
-    font-size: 82px;
+    font-size: 70px;
     line-height: 81px;
     color: var(--white);
 }
@@ -102,13 +110,139 @@ h2 {
 
 /* header */
 
+.background-img {
+    background-image: url(/images/background.png);
+    border-bottom: 6px solid var(--main-color);
+    background-size: cover;
+    background-position: top;
+}
 
+.section-header {
+    background-color: var(--black-translucent);
+    box-shadow: 0px 4px 4px var(--shadow-menu);
+}
 
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-10);
+    padding: 10px 0px;
+}
+
+.logo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--grey-middle);
+}
+
+.dance-club {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 28px;
+    color: var(--grey-middle);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-item {
+    font-size: 16px;
+    line-height: 20px;
+}
 
 /* гамбургер меню для мобильной версии */
 
 
 /* hero-block */
 
+.background-black {
+    width: 50%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.81) 2%, rgba(0, 0, 0, 0.589424) 89.15%, rgba(0, 0, 0, 0) 114.5%);
+}
+
+.slider-hero-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    padding: 80px 80px 70px 20px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-10);
+}
+
+.slider-item {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+}
+
+.slider-item-action {
+    background-color: var(--dark-main);
+}
+
+.hero-title {
+    padding-bottom: 15px;
+}
+
+.hero-description {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px; 
+    color: var(--white);
+    padding-bottom: 20px;
+}
+
+.hero-button {
+    display: flex;
+}
+
+.hero-btn-accent {
+    color: var(--main-color);
+}
+
+.offer {
+    padding-left: 84px;
+    padding-bottom: 120px;
+}
+
+.offer-title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px; 
+    color: var(--white);
+    padding-bottom: 15px;
+}
+
+.offer-description {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--white);
+}
+
+.offer-description-accent {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--main-color);
+    cursor: pointer;
+}
 
 /* footer */

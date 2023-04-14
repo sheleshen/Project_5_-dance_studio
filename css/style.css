@@ -120,6 +120,12 @@ h2 {
 .section-header {
     background-color: var(--black-translucent);
     box-shadow: 0px 4px 4px var(--shadow-menu);
+
+    /* Входит в состав блока с картинкой, поэтому не может выйти за прределы блока? */
+    
+    /* position: sticky;
+    top: 0;
+    z-index: 10; */
 }
 
 .header {
@@ -191,10 +197,12 @@ h2 {
     height: 14px;
     border: 2px solid var(--white);
     border-radius: 10px;
+    cursor: pointer;
 }
 
-.slider-item-action {
+.slider-item:hover {
     background-color: var(--dark-main);
+    transition: background-color 100ms linear;
 }
 
 .hero-title {

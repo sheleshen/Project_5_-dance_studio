@@ -242,6 +242,7 @@ h2 {
 .title {
     padding: 100px 0px 120px 0px;
     text-shadow: 0px 4px 4px var(--shadow-title);
+    padding-left: 94px;
 
     position: relative;
 }
@@ -278,7 +279,7 @@ h2 {
 
     position: absolute;
     top: 140px;
-    left: 20px;
+    left: calc(94px + 20px);
 }
 
 @media (max-width: 600px) {
@@ -494,13 +495,13 @@ h2 {
 
 @media (min-width: 600px) and (max-width: 768px) {
     .background-black {
-        width: 80%;
+        width: 85%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .background-black {
-        width: 70%;
+        width: 75%;
     }
 }
 
@@ -513,9 +514,30 @@ h2 {
 .slider-hero-block {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
 
-    padding: 80px 80px 70px 20px;
+    padding: 80px 80px 70px 40px;
+}
+
+@media (max-width: 600px) {
+    .slider-hero-block {
+        gap: 30px;
+        padding: 60px 30px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .slider-hero-block {
+        gap: 30px;
+        padding: 60px 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .slider-hero-block {
+        gap: 30px;
+        padding: 80px 30px;
+    }
 }
 
 .slider {
@@ -541,22 +563,6 @@ h2 {
     padding-bottom: 15px;
 }
 
-@media (max-width: 600px) {
-
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
-}
-
 .hero-description {
     font-weight: 300;
     font-size: 24px;
@@ -566,27 +572,39 @@ h2 {
 }
 
 @media (max-width: 600px) {
-
+    .hero-description {
+        font-size: 20px;
+        line-height: 20px; 
+    }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
+    .hero-description {
+        font-size: 22px;
+        line-height: 22px; 
+    }
 }
 
 .hero-button {
     display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 350px) {
+    .hero-button {
+        gap: 10px;
+        width: 125px;
+    }
 }
 
 .hero-btn-accent {
     color: var(--main-color);
+}
+
+@media (max-width: 350px) {
+    .hero-btn-accent {
+        width: 125px;
+    }
 }
 
 .offer {
@@ -596,19 +614,35 @@ h2 {
 }
 
 @media (max-width: 600px) {
-
+    .offer {
+        padding-left: 74px;
+        padding-bottom: 60px;
+        padding-right: 40px;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+    .offer {
+        padding-left: 74px;
+        padding-bottom: 60px;
+        padding-right: 40px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    .offer {
+        padding-left: 74px;
+        padding-bottom: 80px;
+        padding-right: 30px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-
+    .offer {
+        padding-left: 94px;
+        padding-bottom: 80px;
+        padding-right: 80px;
+    }
 }
 
 .offer-title {
@@ -620,19 +654,24 @@ h2 {
 }
 
 @media (max-width: 600px) {
-
+    .offer-title {
+        font-size: 24px;
+        line-height: 24px; 
+    }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+    .offer-title {
+        font-size: 26px;
+        line-height: 26px; 
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
+    .offer-title {
+        font-size: 28px;
+        line-height: 28px; 
+    }
 }
 
 .offer-description {
@@ -642,44 +681,12 @@ h2 {
     color: var(--white);
 }
 
-@media (max-width: 600px) {
-
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
-}
-
 .offer-description-accent {
     font-weight: 700;
     font-size: 12px;
     line-height: 12px;
     color: var(--main-color);
     cursor: pointer;
-}
-
-@media (max-width: 600px) {
-
-}
-
-@media (min-width: 600px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-
 }
 
 /* Направления */

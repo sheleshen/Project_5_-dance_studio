@@ -783,5 +783,95 @@ h2 {
     width: fit-content; 
 } 
     
+/* Наши студии*/
+
+.section-studio-img {
+    background-image: url(/images/background\ \(1\).png);
+    background-size: cover;
+    background-position: top;
+}
+
+.studio-list {
+    display: flex;
+    padding: 110px 0px;
+    gap: var(--gap-cards);
+}
+
+.studio-item {
+    width: calc((100% - var(--gap-cards)*2)/3);
+    background-color: rgba(16, 16, 16, 0.86);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.studio-item-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 8px;
+    color: var(--white);
+}
+
+.studio-description-accent {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--dark-main);
+}
+
+.studio-description {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--dark-main);
+    padding-bottom: 30px;
+}
+
+.contact-studio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-10);
+    padding-top: 20px;
+}
+
+.icon-contact {
+    color: var(--dark-main);
+    font-size: 24px;
+}
+
+.phone-adress {
+    color: var(--white);
+    font-size: 16px;
+}
+
+
+.subscriptions-img {
+    background-image: url(/images/banner.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-bottom: 6px solid var(--main-color);
+    margin-bottom: 120px;
+}
+
+.banner {
+    padding: 30px 0px 30px 40px;
+}
+
+.title-banner {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 50px;
+    color: var(--white);
+    padding-bottom: 30px;
+}
 
 /* footer */

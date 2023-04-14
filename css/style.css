@@ -36,7 +36,7 @@
     --shadow-title: rgba(0, 0, 0, 0.25);
 
     --gap-directions: 20px;
-    --gap-maps: 20px;
+    --gap-cards: 20px;
     --gap-icon: 10px;
     --gap-10: 10px;
 }
@@ -691,6 +691,97 @@ h2 {
 
 /* Направления */
 
+.cards-direction-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap-cards);
+}
 
+.cards-direction-item {
+    width: calc((100% - var(--gap-cards)*2)/3);
+}
+
+.cards-dance-mix {
+    background-image: url(/images/Rectangle\ 6.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-children {
+    background-image: url(/images/Rectangle\ 7.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-caribbean-mix {
+    background-image: url(/images/Rectangle\ 8.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-pole-dance {
+    background-image: url(/images/Rectangle\ 9.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-sky-jumping {
+    background-image: url(/images/Rectangle\ 10.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-hip-hop {
+    background-image: url(/images/Rectangle\ 11.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.name-direction {
+    padding: 320px 20px 0px 0px;
+    color: var(--white);
+
+}
+
+.accent-direction {
+    padding: 5px 10px;
+	background: var(--dark);
+}
+
+.button-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px;
+    background: linear-gradient(0deg, rgba(32, 32, 33, 0.79) 0%, rgba(32, 32, 33, 0) 231.77%);
+    border-top: 7px solid var(--dark);
+}
+
+.btn-transparent {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    width: fit-content; 
+}
+
+.btn-yellow {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--main-color);
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px 10px 20px;
+    width: fit-content; 
+} 
+    
 
 /* footer */

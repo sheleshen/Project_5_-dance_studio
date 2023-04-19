@@ -689,9 +689,144 @@ h2 {
     cursor: pointer;
 }
 
+/* Блок расписание */
+
+.cards-schedule-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap-cards);
+}
+
+.cards-schedule-item {
+    width: calc((100% - var(--gap-cards)*2)/3);
+}
+
+.cards-dance-mix {
+    background-image: url(/images/Rectangle\ 6.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.cards-children {
+    background-image: url(/images/Rectangle\ 7.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-caribbean-mix {
+    background-image: url(/images/Rectangle\ 8.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-pole-dance {
+    background-image: url(/images/Rectangle\ 9.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-sky-jumping {
+    background-image: url(/images/Rectangle\ 10.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.cards-hip-hop {
+    background-image: url(/images/Rectangle\ 11.png);
+    background-size: cover;
+    background-position: top;
+}
+
+/* .schedule-position {
+    position: relative;
+}
+
+.cards-item-img::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    background-color: var(--shadow-title);
+} */
+
+.name-schedule {
+    padding: 120px 20px 0px 0px;
+    color: var(--white);
+
+}
+
+.accent-schedule {
+    padding: 5px 10px;
+	background: var(--dark);
+}
+
+.border-accent {
+    border-bottom: 7px solid var(--dark);
+}
+
+.schedule-date {
+    background-color: #181819;
+    padding: 14px;
+}
+
+.schedule-date-border {
+    /* padding: 14px; */
+    border: 1px solid var(--dark-main);
+}
+
+.date-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-10);
+    align-items: center;
+    padding: 20px 0px;
+
+}
+
+.text-date {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+}
 
 
 
+
+
+.button-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.btn-transparent {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    width: fit-content; 
+}
+
+.btn-yellow {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--main-color);
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px 10px 20px;
+    width: fit-content; 
+} 
 
 /* footer */
 

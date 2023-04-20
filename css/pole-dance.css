@@ -126,6 +126,32 @@ a:hover {
     transition: background-color 300ms linear; 
 }
 
+.btn-transparent {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    width: fit-content; 
+}
+
+.btn-yellow {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--main-color);
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px 10px 20px;
+    width: fit-content; 
+} 
+
 h1 {
     font-style: normal;
     font-weight: 400;
@@ -240,7 +266,7 @@ h2 {
 }
 
 .title {
-    padding: 100px 0px 120px 0px;
+    padding: 0px 0px 100px 0px;
     text-shadow: 0px 4px 4px var(--shadow-title);
     padding-left: 94px;
 
@@ -249,25 +275,25 @@ h2 {
 
 @media (max-width: 600px) {
     .title {
-        padding: 40px 0px 40px 0px;
+        padding: 0px 0px 40px 0px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .title {
-        padding: 60px 0px 60px 0px;
+        padding: 0px 0px 60px 0px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .title {
-        padding: 80px 0px 80px 0px;
+        padding: 0px 0px 80px 0px;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
     .title {
-        padding: 100px 0px 100px 0px;
+        padding: 0px 0px 100px 0px;
     }
 }
 
@@ -278,7 +304,7 @@ h2 {
     color: var(--white);
 
     position: absolute;
-    top: 140px;
+    top: 40px;
     left: calc(94px + 20px);
 }
 
@@ -286,7 +312,7 @@ h2 {
     .double-title {
         font-size: 20px;
     
-        top: 55px;
+        top: 15px;
         left: 12px;
     }
 }
@@ -295,7 +321,7 @@ h2 {
     .double-title {
         font-size: 22px;
     
-        top: 85px;
+        top: 25px;
         left: 16px;
     }
 }
@@ -304,7 +330,7 @@ h2 {
     .double-title {
         font-size: 24px;
     
-        top: 110px;
+        top: 30px;
         left: 20px;
     }
 }
@@ -313,7 +339,7 @@ h2 {
     .double-title {
         font-size: 26px;
     
-        top: 140px;
+        top: 40px;
         left: 20px;
     }
 }
@@ -689,9 +715,140 @@ h2 {
     cursor: pointer;
 }
 
+/* main */
 
+.list-direction-img {
+    display: flex;
+    align-items: center;
+    padding: 100px 0px;
+}
 
+.direction-block {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+}
 
+.direction-description {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.list-direction {
+    padding: 14px 0px;
+}
+
+.ol-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--white);
+
+    padding-left: 20px;
+}
+
+.accet-text {
+    font-weight: 700;
+}
+
+/* запись */
+
+.record-list {
+    display: flex;
+    gap: var(--gap-10);
+    flex-wrap: wrap;
+}
+
+.record-item {
+    width: calc((100% - var(--gap-10)*1)/2);
+} 
+
+.record-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--main-color);
+}
+
+.record-description {
+    font-weight: 300;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.week-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.day-week {
+    padding: 1px 0px 0px 4px;
+}
+
+/* баннер */
+
+.section-pdb {
+    padding: 70px 0px;
+}
+
+.pdb-img {
+    background-image: url(/images/Pole-Dance-banner.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-bottom: 6px solid var(--main-color);
+}
+
+.banner {
+    padding: 30px 0px 30px 40px;
+}
+
+.title-banner {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 50px;
+    color: var(--white);
+    padding-bottom: 30px;
+}
+
+/* кнопка */
+
+.section-more-pdb {
+    padding-bottom: 70px;
+}
+
+.more-list {
+    display: flex;
+    justify-content: end;
+}
+
+.btn-style {
+    display: flex;
+    gap: var(--gap-10);
+    align-items: center;
+    border: 1px solid var(--white);
+    padding: 10px 14px 10px 14px;
+    cursor: pointer;
+}
+
+.name-btn {
+    font-size: 18px;
+    color: var(--white);
+}
+
+.icon-list {
+    display: flex;
+}
+
+.icon-pdb {
+    font-size: 16px;
+    color: var(--white);
+}
 
 /* footer */
 

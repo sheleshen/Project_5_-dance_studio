@@ -852,6 +852,7 @@ h2 {
     font-size: 16px;
 }
 
+/* Баннер */
 
 .subscriptions-img {
     background-image: url(/images/banner.png);
@@ -873,6 +874,8 @@ h2 {
     color: var(--white);
     padding-bottom: 30px;
 }
+
+/* Абонементы */
 
 .subscriptions-list {
     padding-bottom: 120px;

@@ -321,7 +321,7 @@ h2 {
 /* header */
 
 .background-img {
-    background-image: url(/images/background.png);
+    background-image: url(/images/background-teachers.png);
     border-bottom: 6px solid var(--main-color);
     background-size: cover;
     background-position: top;

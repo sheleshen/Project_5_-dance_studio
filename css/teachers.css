@@ -116,7 +116,7 @@ a:hover {
     line-height: 16px;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px 20px 10px 20px;
+    padding: 11px 20px 9px 20px;
     width: fit-content; 
 }
 
@@ -330,12 +330,6 @@ h2 {
 .section-header {
     background-color: var(--black-translucent);
     box-shadow: 0px 4px 4px var(--shadow-menu);
-
-    /* Входит в состав блока с картинкой, поэтому не может выйти за прределы блока? */
-
-    /* position: sticky;
-    top: 0;
-    z-index: 10; */
 }
 
 .header {
@@ -347,9 +341,15 @@ h2 {
 .section-logo {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: end;
     gap: var(--gap-10);
     padding: 10px 0px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section-logo {
+        gap: 7px;
+    }
 }
 
 .logo {
@@ -367,26 +367,25 @@ h2 {
 
 @media (min-width: 600px) and (max-width: 768px) {
     .logo {
-        font-size: 24px;
+        font-size: 21px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .logo {
-        font-size: 27px;
+        font-size: 24px;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
     .logo {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 
 .dance-club {
     font-weight: 300;
     font-size: 28px;
-    line-height: 28px;
     color: var(--grey-middle);
 }
 
@@ -404,14 +403,13 @@ h2 {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .dance-club {
-        display: none;
+        font-size: 18px;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
     .dance-club {
-        font-size: 26px;
-        line-height: 26px;
+        font-size: 23px;
     }
 }
 
@@ -455,6 +453,24 @@ h2 {
 
 /* гамбургер меню для мобильной версии */
 
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 1px;
+    background: var(--dark-elight);
+}
+
+@media (max-width: 600px) {
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+    }
+}
 
 /* hero-block */
 
@@ -519,7 +535,13 @@ h2 {
     padding: 80px 80px 70px 40px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
+    .slider-hero-block {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
     .slider-hero-block {
         gap: 30px;
         padding: 60px 30px;
@@ -613,7 +635,13 @@ h2 {
     padding-right: 80px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
+    .offer {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
     .offer {
         padding-left: 74px;
         padding-bottom: 60px;
@@ -753,6 +781,7 @@ h2 {
     background-image: url(/images/background\ \(2\).png);
     background-size: cover;
     background-position: top;
+    border-top: 5px solid var(--main-color);
 }
 
 .messengers {
@@ -761,6 +790,32 @@ h2 {
     justify-content: end;
     gap: var(--gap-10);
     padding: 60px 0px;
+}
+
+@media (max-width: 320px) {
+    .messengers {
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .messengers {
+        flex-direction: column;
+        padding: 30px 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .messengers {
+        padding: 40px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .messengers {
+        padding: 50px 0px;
+    }
 }
 
 .title-messengers {
@@ -789,8 +844,46 @@ h2 {
     padding-bottom: 80px;
 }
 
+@media (max-width: 320px) {
+    .info-footer {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .info-footer {
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .info-footer {
+        padding-bottom: 60px;
+    }
+}
+
 .menu-footer {
     width: 50%;
+}
+
+@media (max-width: 600px) {
+    .menu-footer {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .menu-footer {
+        width: 30%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu-footer {
+        width: 40%;
+    }
 }
 
 .menu-list {
@@ -808,6 +901,24 @@ h2 {
     width: 50%;
 }
 
+@media (max-width: 600px) {
+    .all-contacts {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .all-contacts {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .all-contacts {
+        width: 60%;
+    }
+}
+
 .title-contacts {
     font-size: 20px;
     font-weight: 300;
@@ -818,13 +929,48 @@ h2 {
     align-items: center;
 }
 
+@media (max-width: 320px) {
+    .title-contacts {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .title-contacts {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+}
+
 .contacts-footer-list {
     display: flex;
     gap: 8px;
 }
 
+@media (max-width: 600px) {
+    .contacts-footer-list {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+}
+
 .contacts-footer-item {
     width: calc((100% - var(--gap-10)*1)/2);
+}
+
+@media (max-width: 600px) {
+    .contacts-footer-item {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
 }
 
 .address-list, .telephone-list {

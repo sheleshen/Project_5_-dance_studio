@@ -118,7 +118,7 @@ a:hover {
     line-height: 16px;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px 20px 10px 20px;
+    padding: 11px 20px 9px 20px;
     width: fit-content; 
 }
 
@@ -332,12 +332,6 @@ h2 {
 .section-header {
     background-color: var(--black-translucent);
     box-shadow: 0px 4px 4px var(--shadow-menu);
-
-    /* Входит в состав блока с картинкой, поэтому не может выйти за прределы блока? */
-
-    /* position: sticky;
-    top: 0;
-    z-index: 10; */
 }
 
 .header {
@@ -349,9 +343,15 @@ h2 {
 .section-logo {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: end;
     gap: var(--gap-10);
     padding: 10px 0px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section-logo {
+        gap: 7px;
+    }
 }
 
 .logo {
@@ -369,26 +369,25 @@ h2 {
 
 @media (min-width: 600px) and (max-width: 768px) {
     .logo {
-        font-size: 24px;
+        font-size: 21px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .logo {
-        font-size: 27px;
+        font-size: 24px;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
     .logo {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 
 .dance-club {
     font-weight: 300;
     font-size: 28px;
-    line-height: 28px;
     color: var(--grey-middle);
 }
 
@@ -406,14 +405,13 @@ h2 {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .dance-club {
-        display: none;
+        font-size: 18px;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
     .dance-club {
-        font-size: 26px;
-        line-height: 26px;
+        font-size: 23px;
     }
 }
 
@@ -457,6 +455,24 @@ h2 {
 
 /* гамбургер меню для мобильной версии */
 
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 1px;
+    background: var(--dark-elight);
+}
+
+@media (max-width: 600px) {
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+    }
+}
 
 /* hero-block */
 
@@ -521,7 +537,13 @@ h2 {
     padding: 80px 80px 70px 40px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
+    .slider-hero-block {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
     .slider-hero-block {
         gap: 30px;
         padding: 60px 30px;
@@ -615,7 +637,13 @@ h2 {
     padding-right: 80px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
+    .offer {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
     .offer {
         padding-left: 74px;
         padding-bottom: 60px;
@@ -783,7 +811,15 @@ h2 {
     border-top: 7px solid var(--dark);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
+    .button-list {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
     .button-list {
         padding: 12px;
     }
@@ -857,12 +893,11 @@ h2 {
     background-position: top;
 }
 
-
-
 .studio-list {
     display: flex;
     padding: 110px 0px;
     gap: var(--gap-cards);
+    flex-wrap: wrap;
 }
 
 @media (max-width: 600px) {
@@ -1029,12 +1064,26 @@ h2 {
 @media (max-width: 600px) {
     .subscriptions-img {
         background-position: right;
+        margin-bottom: 40px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .subscriptions-img {
         background-position: right;
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .subscriptions-img {
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .subscriptions-img {
+        margin-bottom: 100px;
     }
 }
 
@@ -1063,31 +1112,35 @@ h2 {
 .title-banner {
     font-weight: 700;
     font-size: 46px;
-    line-height: 50px;
+    line-height: 120%;
     color: var(--white);
     padding-bottom: 30px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
     .title-banner {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .title-banner {
+        font-size: 28px;
         padding-bottom: 20px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .title-banner {
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 34px;
         padding-bottom: 20px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .title-banner {
-        font-size: 42px;
-        line-height: 48px;
+        font-size: 40px;
     }
 }
 
@@ -1110,7 +1163,6 @@ h2 {
 @media (min-width: 600px) and (max-width: 768px) {
     .subscriptions-list {
         padding-bottom: 60px;
-        flex-direction: column;
     }
 }
 
@@ -1193,11 +1245,55 @@ h2 {
     padding: 20px 0px;
 }
 
+@media (max-width: 320px) {
+    .title-subscriptions {
+        font-size: 17px;
+        padding: 15px 0px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .title-subscriptions {
+        font-size: 17px;
+        padding: 15px 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .title-subscriptions {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .title-subscriptions {
+        font-size: 24px;
+    }
+}
+
 .description-subscriptions {
     font-weight: 300;
     font-size: 15px;
     color: var(--white);
     padding: 0px 14px 40px 14px;
+}
+
+@media (max-width: 320px) {
+    .description-subscriptions {
+        padding: 0px 12px 20px 12px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .description-subscriptions {
+        padding: 0px 14px 30px 14px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .description-subscriptions {
+        padding: 0px 14px 30px 14px;
+    }
 }
 
 .price-buy {
@@ -1206,6 +1302,13 @@ h2 {
     align-items: center;
     
     padding: 0px 14px 14px 14px;
+}
+
+@media (max-width: 320px) {
+    .price-buy {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
 
 .price-subscriptions {
@@ -1219,10 +1322,46 @@ h2 {
     color: var(--white);
 }
 
+@media (max-width: 320px) {
+    .price {
+        font-size: 21px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .price {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .price {
+        font-size: 22px;
+    }
+}
+
 .price-accent {
     font-weight: 700;
     font-size: 25px;
     color: var(--dark-main);
+}
+
+@media (max-width: 320px) {
+    .price-accent {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .price-accent {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .price-accent {
+        font-size: 23px;
+    }
 }
 
 /* footer */
@@ -1256,6 +1395,18 @@ h2 {
     }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+    .messengers {
+        padding: 40px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .messengers {
+        padding: 50px 0px;
+    }
+}
+
 .title-messengers {
     font-weight: 300;
     font-size: 26px;
@@ -1282,7 +1433,14 @@ h2 {
     padding-bottom: 80px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
+    .info-footer {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
     .info-footer {
         flex-direction: column;
         padding-bottom: 40px;
@@ -1306,7 +1464,15 @@ h2 {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+    .menu-footer {
+        width: 30%;
+    }
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu-footer {
+        width: 40%;
+    }
 }
 
 .menu-list {
@@ -1328,11 +1494,18 @@ h2 {
     .all-contacts {
         width: 100%;
     }
-    
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+    .all-contacts {
+        width: 70%;
+    }
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .all-contacts {
+        width: 60%;
+    }
 }
 
 .title-contacts {
@@ -1345,6 +1518,20 @@ h2 {
     align-items: center;
 }
 
+@media (max-width: 320px) {
+    .title-contacts {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .title-contacts {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+}
+
 .contacts-footer-list {
     display: flex;
     gap: 8px;
@@ -1353,6 +1540,7 @@ h2 {
 @media (max-width: 600px) {
     .contacts-footer-list {
         flex-direction: column;
+        gap: 16px;
     }
 }
 

@@ -150,7 +150,7 @@ a:hover {
     text-transform: uppercase;
     padding: 10px 20px 10px 20px;
     width: fit-content; 
-} 
+}
 
 h1 {
     font-style: normal;
@@ -749,12 +749,44 @@ h2 {
     display: flex;
     align-items: center;
     padding: 100px 0px;
+    gap: 40px;
+}
+
+@media (max-width: 600px) {
+    .list-direction-img {
+        flex-direction: column;
+        padding: 40px 0px;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .list-direction-img {
+        flex-direction: column;
+        padding: 60px 0px;
+        gap: 30px;
+    }
+}
+
+.img-pole-dance {
+    width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .img-pole-dance {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .img-pole-dance {
+        width: 50%;
+    }
 }
 
 .direction-block {
     display: flex;
     flex-direction: column;
-    padding-right: 40px;
 }
 
 .direction-description {
@@ -789,9 +821,33 @@ h2 {
     flex-wrap: wrap;
 }
 
+@media (max-width: 600px) {
+    .record-list {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .record-list {
+        flex-direction: column;
+    }
+}
+
 .record-item {
     width: calc((100% - var(--gap-10)*1)/2);
 } 
+
+@media (max-width: 600px) {
+    .record-item {
+        width: 100%;
+    } 
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .record-item {
+        width: 100%;
+    } 
+}
 
 .record-button {
     display: flex;
@@ -800,6 +856,12 @@ h2 {
     border: 1px solid var(--main-color);
 }
 
+/* @media (max-width: 320px) {
+    .record-button {
+        flex-direction: column;
+    }
+} */
+
 .record-description {
     font-weight: 300;
     font-size: 30px;
@@ -807,11 +869,66 @@ h2 {
     color: var(--white);
 }
 
+@media (max-width: 450px) {
+    .record-description {
+        display: none;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 600px) {
+    .record-description {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .record-description {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .record-description {
+        font-size: 25px;
+    }
+}
+
+.record-description-mv {
+    font-weight: 300;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+@media (min-width: 450px) {
+    .record-description-mv {
+        display: none;
+    }
+}
+
 .week-time {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .week-time {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .week-time {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .week-time {
+        gap: 10px;
+    }
 }
 
 .day-week {
@@ -824,6 +941,18 @@ h2 {
     padding: 70px 0px;
 }
 
+@media (max-width: 600px) {
+    .section-pdb {
+        padding: 40px 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .section-pdb {
+        padding: 60px 0px;
+    }
+}
+
 .pdb-img {
     background-image: url(/images/Pole-Dance-banner.png);
     background-size: cover;
@@ -832,16 +961,73 @@ h2 {
     border-bottom: 6px solid var(--main-color);
 }
 
+@media (max-width: 600px) {
+    .pdb-img {
+        background-position: right;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .pdb-img {
+        background-position: right;
+    }
+}
+
 .banner {
     padding: 30px 0px 30px 40px;
+}
+
+@media (max-width: 600px) {
+    .banner {
+        padding: 20px 0px 20px 20px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .banner {
+        padding: 24px 0px 24px 24px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .banner {
+        padding: 30px 0px 30px 30px;
+    }
 }
 
 .title-banner {
     font-weight: 700;
     font-size: 46px;
-    line-height: 50px;
+    line-height: 120%;
     color: var(--white);
     padding-bottom: 30px;
+}
+
+@media (max-width: 320px) {
+    .title-banner {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .title-banner {
+        font-size: 28px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .title-banner {
+        font-size: 34px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .title-banner {
+        font-size: 40px;
+    }
 }
 
 /* кнопка */

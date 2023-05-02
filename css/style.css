@@ -7,6 +7,7 @@
 }
 
 :root {
+    --vdark-main: #b46d09;
     --dark-main: #C88930;
     --main-color: #E89B2B;
     --main-color-semi: #F2B050;
@@ -64,12 +65,17 @@ a, p, ul, li, h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-a, .link-logo {
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.link, .link-logo {
     text-decoration: none;
     color: var(--secondary-light);
 }
 
-a:hover {
+.link:hover {
     color: var(--secondary-semi);
     transition: color 300ms linear;
 }
@@ -121,10 +127,12 @@ a:hover {
     text-transform: uppercase;
     padding: 11px 20px 9px 20px;
     width: fit-content; 
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: var(--);
+    background-color: var(--secondary-middle);
+    color: var(--dark);
     cursor: pointer;
     transition: background-color 300ms linear; 
 }
@@ -624,6 +632,7 @@ h2 {
 
 .hero-btn-accent {
     color: var(--main-color);
+    cursor: pointer;
 }
 
 @media (max-width: 350px) {
@@ -841,8 +850,15 @@ h2 {
     font-size: 15px;
     text-align: center;
     text-transform: uppercase;
-    padding: 7px 13px;
-    width: fit-content; 
+    padding: 7px 13px 7px 13px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.btn-transparent:hover {
+    background-color: var(--vdark-main);
+    border: 1px solid var(--vdark-main);
+    transition: background-color 250ms linear;
 }
 
 @media (max-width: 600px) {
@@ -868,9 +884,16 @@ h2 {
     font-size: 15px;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px 20px 10px 20px;
-    width: fit-content; 
-} 
+    padding: 11px 20px 9px 20px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.btn-yellow:hover {
+    background-color: var(--vdark-main);
+    color: var(--white);
+    transition: all 250ms linear;
+}
 
 @media (max-width: 600px) {
     .btn-yellow {

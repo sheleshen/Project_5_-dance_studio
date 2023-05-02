@@ -1206,12 +1206,14 @@ h2 {
     background-image: url(/images/Rectangle\ 45.png);
     background-size: cover;
     background-position: top;
+    height: 100%;
 }
 
 .rate-standart {
     background-image: url(/images/Rectangle\ 51.png);
     background-size: cover;
     background-position: top;
+    height: 100%;
 }
 
 .rate-max {
@@ -1245,18 +1247,16 @@ h2 {
 .blur-substrate {
     backdrop-filter: blur(1.5px);
     padding: 10px;
-}
-
-
-.subscriptions-pouring {
-    border: 1px solid var(--main-color);
-    background-color: rgba(0, 0, 0, 0.52);
+    height: 100%;
 }
 
 .rate {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid var(--main-color);
+    background-color: rgba(0, 0, 0, 0.52);
+    height: 100%;
 }
 
 .title-subscriptions {
